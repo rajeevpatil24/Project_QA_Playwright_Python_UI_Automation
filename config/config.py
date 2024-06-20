@@ -1,0 +1,7 @@
+BASE_URL = "http://127.0.0.1:6789/"
+LOGIN_URL = f"{BASE_URL}/login"
+PRODUCTS_URL = f"{BASE_URL}/product_listing"
+VALID_USER = "testuser"
+VALID_PASSWORD = "password123"
+INVALID_USER = "test123"
+INVALID_PASSWORD = "Password908"

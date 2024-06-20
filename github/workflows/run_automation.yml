@@ -1,0 +1,20 @@
+name: Run Tests and Generate Report
+
+on:
+  push:
+    branches:
+      - main  # Adjust to your main branch name
+
+jobs:
+  test:
+    runs-on: latest-image   #### wrote this step thinking that latest-image has python installed & git clone is done
+    steps:
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  
+
+      - name: Run tests and generate HTML report
+        run: |
+          pytest tests/test_product_listing.py --html=reports/test_product_listing_report1.html
+          pytest tests/test_login.py --html=reports/test_login_report2.html
